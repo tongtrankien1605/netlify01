@@ -19,7 +19,6 @@ self.addEventListener("install", (event) => {
     // Xác định REPOSITORY_ROOT
     let REPOSITORY_ROOT = "/"; // Mặc định là /
     if (hostname === "github.io" || hostname.endsWith(".github.io") || hostname === "gitlab.io" || hostname.endsWith(".gitlab.io")) {
-        // Lấy base path từ scope pathname
         const path = scopeUrl.pathname.split("/").filter(Boolean);
         REPOSITORY_ROOT = path.length > 0 ? `/${path[0]}/` : "/";
     } else {
