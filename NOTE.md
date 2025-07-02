@@ -1,4 +1,4 @@
-## daohuyenmy by Tống Trần Kiên
+## tiktok-clone-v3 by Tống Trần Kiên
 
 </br>
 
@@ -27,7 +27,7 @@
     - Note 6: Sử dụng window.location.pathname ( html ) & self.registration.scope ( service worker ) để lấy pathname dùng cho
     basepath cho REPOSITORY_ROOT đối với Github Pages và Gitlab Pages
 
-    - Note 7: Cấu hình sẵn baseConfig để ánh xạ lấy basepath đối với các dịch vụ: Netlify ( netlify.app ), Vercal ( vercel.app ),
+    - Note 7: Cấu hình sẵn baseConfig để ánh xạ lấy basepath đối với các dịch vụ: Netlify ( netlify.app ), Vercel ( vercel.app ),
     Cloudflare ( pages.dev ), Firebase Hosting ( web.app ), Surge ( surge.sh ), Neocities ( neocities.org ), Render ( onrender.com ).
     Bên cạnh đó 2 dịch vụ Github Pages ( github.io ) & Gitlab Page ( gitlab.io ) được cấu hình sẵn base path tự động qua URL
 
@@ -48,10 +48,10 @@
 ## 💻 Giải thích các BASE_URL:
 
     const REPOSITORY_ROOT: Đường dẫn gốc của dự án, dùng để đăng ký Service Worker.
-    ( ví dụ xây dựng trên github có repository là daohuyenmy => thì REPOSITORY_ROOT = "/daohuyenmy/" )
+    ( ví dụ xây dựng trên github có repository là tiktok-clone-v3 => thì REPOSITORY_ROOT = "/tiktok-clone-v3/" )
 
     const VIDEOS_JSON_URL: Đường dẫn đến file JSON chứa thông tin video như Title, URL, Desription, dayCreate
-    ( ví dụ xây dựng trên github có repository là daohuyenmy => thì const VIDEOS_JSON_URL = `${REPOSITORY_ROOT}videos.json`; )
+    ( ví dụ xây dựng trên github có repository là tiktok-clone-v3 => thì const VIDEOS_JSON_URL = `${REPOSITORY_ROOT}videos.json`; )
 
     const CACHE_NAME: Tên của Worker Service, lưu ý cần cập nhật ở cả file html & script. ( const CACHE_NAME = "service-worker-v1" )
 

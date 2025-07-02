@@ -1,10 +1,10 @@
-## 🚀 **daohuyenmy : Lướt video tương tự tiktok, sử dụng Base_URL để chủ động khi thay đổi tài khoản hoặc tên repository mà không cần sửa logic** 🚀
+## 🚀 **tiktok-clone-v3 : Lướt video tương tự tiktok, sử dụng Base_URL để chủ động khi thay đổi mà không cần sửa logic** 🚀
 
 **Trang được code dựa theo cấu trúc nhỏ giống Tiktok, dùng để xem các video đã được upload lên server**
 
 </br>
 
-## 🌐 Truy cập để xem [TẠI ĐÂY](https://tongtrankien1605.github.io/daohuyenmy) nhé !
+## 🌐 Truy cập để xem [TẠI ĐÂY](https://tongtrankien1605.github.io/tiktok-clone-v3) nhé !
 
 </br>
 
@@ -33,7 +33,7 @@
     - Note 6: Sử dụng window.location.pathname ( html ) & self.registration.scope ( service worker ) để lấy pathname dùng cho
     basepath cho REPOSITORY_ROOT đối với Github Pages và Gitlab Pages
 
-    - Note 7: Cấu hình sẵn baseConfig để ánh xạ lấy basepath đối với các dịch vụ: Netlify ( netlify.app ), Vercal ( vercel.app ), 
+    - Note 7: Cấu hình sẵn baseConfig để ánh xạ lấy basepath đối với các dịch vụ: Netlify ( netlify.app ), Vercel ( vercel.app ), 
     Cloudflare ( pages.dev ), Firebase Hosting ( web.app ), Surge ( surge.sh ), Neocities ( neocities.org ), Render ( onrender.com ).
     Bên cạnh đó 2 dịch vụ Github Pages ( github.io ) & Gitlab Page ( gitlab.io ) được cấu hình sẵn base path tự động qua URL
 
@@ -54,10 +54,10 @@
 ## 💻 Giải thích các BASE_URL:
 
     const REPOSITORY_ROOT: Đường dẫn gốc của dự án, dùng để đăng ký Service Worker.
-    ( ví dụ xây dựng trên github có repository là daohuyenmy => thì REPOSITORY_ROOT = "/daohuyenmy/" )
+    ( ví dụ xây dựng trên github có repository là tiktok-clone-v3 => thì REPOSITORY_ROOT = "/tiktok-clone-v3/" )
 
     const VIDEOS_JSON_URL: Đường dẫn đến file JSON chứa thông tin video như Title, URL, Desription, dayCreate
-    ( ví dụ xây dựng trên github có repository là daohuyenmy => thì const VIDEOS_JSON_URL = `${REPOSITORY_ROOT}videos.json`; )
+    ( ví dụ xây dựng trên github có repository là tiktok-clone-v3 => thì const VIDEOS_JSON_URL = `${REPOSITORY_ROOT}videos.json`; )
 
     const CACHE_NAME: Tên của Worker Service, lưu ý cần cập nhật ở cả file html & script. ( const CACHE_NAME = "service-worker-v1" )
 
@@ -107,7 +107,7 @@
     Quy trình:
 
     - Bỏ qua cache localStorage vì hết hạn.
-    - Fetch videos.json mới từ server (/daohuyenmy/videos.json?v=<timestamp>).
+    - Fetch videos.json mới từ server (/tiktok-clone-v3/videos.json?v=<timestamp>).
     - Kiểm tra các URL video bằng fetch với method HEAD.
     - Lưu danh sách video mới và version vào localStorage, đặt lại thời hạn 24h.
     - Kiểm tra và xóa video cũ khỏi cache Service Worker (nếu URL không còn trong videos.json).
