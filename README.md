@@ -1,6 +1,9 @@
 ## 🚀 **tiktok-clone-v3 : Lướt video tương tự tiktok, sử dụng Base_URL để chủ động khi thay đổi mà không cần sửa logic** 🚀
 
-**Trang được code dựa theo cấu trúc nhỏ giống Tiktok, dùng để xem các video đã được upload lên server**
+**- Trang được code dựa theo cấu trúc nhỏ giống Tiktok, dùng để xem các video đã được upload lên server**
+</br>
+
+**- Phiên bản v3: video thêm vào folder videos, logic xử lý để sử dụng trực tiếp băng thông của dịch vụ deploy**
 
 </br>
 

@@ -146,13 +146,10 @@
         <script>
             // Định nghĩa ánh xạ hostname với base path
             const baseConfig = new Map([
-                ["netlify.app", "/"],
-                ["vercel.app", "/"],
-                ["pages.dev", "/"],
-                ["web.app", "/"],
-                ["surge.sh", "/"],
-                ["neocities.org", "/"],
-                ["onrender.com", "/"],
+                ["netlify.app", "/"],   // Netlify
+                ["vercel.app", "/"],    // Vercel
+                ["pages.dev", "/"],     // Cloudflare Pages
+                ["onrender.com", "/"],  // Render
             ]);
 
             // Lấy hostname hiện tại
@@ -161,6 +158,7 @@
             // Xác định REPOSITORY_ROOT dựa trên hostname
             let REPOSITORY_ROOT = "/"; // Mặc định là /
             if (hostname === "github.io" || hostname.endsWith(".github.io") || hostname === "gitlab.io" || hostname.endsWith(".gitlab.io")) {
+                // Lấy base path từ pathname (bỏ query string và fragment)
                 const path = window.location.pathname.split("/").filter(Boolean);
                 REPOSITORY_ROOT = path.length > 0 ? `/${path[0]}/` : "/";
             } else {
